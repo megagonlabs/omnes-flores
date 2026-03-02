@@ -39,7 +39,7 @@ def vllm_main(args):
         model=args.model_name_or_path,
         enable_lora=args.adapter_name_or_path is not None,
         tokenizer=args.model_name_or_path,
-        dtype=args.bfloat16,
+        dtype=args.dtype,
         max_model_len=args.max_model_len,
         gpu_memory_utilization=args.gpu_memory_utilization,
         tensor_parallel_size=args.tensor_parallel_size,
