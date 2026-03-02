@@ -48,14 +48,14 @@ def vllm_main(args):
         max_lora_rank=args.max_lora_rank,
         load_format=args.load_format,
     )
-    print(f"model loaded")
-    """
     tokenizer = llm.get_tokenizer()
     lora_request = LoRARequest("adapter", 1, args.adapter_name_or_path)
     sampling_params = SamplingParams(
         temperature=args.temperature,
         max_tokens=args.max_tokens,
     )
+    print(f"model loaded")
+    """
     results = llm.chat(
         messages=[full_messages[:chat_index] for line_index, chat_index, full_messages in batch],
         sampling_params=sampling_params,
