@@ -1,0 +1,44 @@
+[project]
+name = "omnes-flores"
+dynamic = ["version"]
+description = "omnes-flores: A Unified LLM-Based NLP Framework."
+authors = [{name = "Hiroshi Matsuda", email = "hiroshi_matsuda@megagon.ai"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: GPU :: NVIDIA CUDA :: 12 :: 12.8",
+    "Framework :: Sphinx :: Extension",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+]
+keywords = ["omnes-flores", "universal dependencies", "UD", "natural language processing", "NLP"]
+requires-python = ">=3.11"
+dependencies = [
+    "vllm==0.11.0",
+    "transformers==4.57.0",
+]
+
+[project.urls]
+Documentation = "https://megagonlabs.github.io/omnes-flores/"
+Repository = "https://github.com/megagonlabs/omnes-flores"
+
+[project.optional-dependencies]
+docs = [
+]
+dev = [
+]
+
+[build-system]
+requires = ["flit_core"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.sdist]
+include = ["omnes_flores/"]
+exclude = [
+]
