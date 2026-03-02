@@ -1,7 +1,7 @@
 [project]
 name = "omnes-flores"
 dynamic = ["version"]
-description = "omnes-flores: A Unified LLM-Based NLP Framework."
+description = "omnes-flores: A Unified NLP Framework for LLMs"
 authors = [{name = "Hiroshi Matsuda", email = "hiroshi_matsuda@megagon.ai"}]
 readme = "README.md"
 license = {file = "LICENSE"}

@@ -1,4 +1,4 @@
-# omnes-flores: A Unified LLM-Based NLP Framework
+# omnes-flores: A Unified NLP Framework for LLMs
 
 [![Downloads](https://pepy.tech/badge/omnes-flores/week)](https://pepy.tech/project/omnes-flores)
 
