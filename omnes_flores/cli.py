@@ -13,7 +13,7 @@ from vllm.v1.engine.llm_engine import LLMEngine as LLMEngineV1
 def main():
     parser = ArgumentParser()
     parser.add_argument("--model_name_or_path", "--m", type=str, default="google/gemma-2-9b")
-    parser.add_argument("--adapter_name_or_path", "--m", type=str, default="megagonlabs/omnes-flores-40-lang-41-treebank-v0-ud")
+    parser.add_argument("--adapter_name_or_path", "--a", type=str, default="megagonlabs/omnes-flores-40-lang-41-treebank-v0-ud")
     parser.add_argument("--input_text", "--it", type=str)
     parser.add_argument("--input_sentence", "--is", type=str)
     parser.add_argument("--input_language", "--il", type=str)
@@ -28,7 +28,7 @@ def main():
     parser.add_argument("--enforce_eager", action="store_true")
     parser.add_argument("--quantization", "--q")
     parser.add_argument("--max_lora_rank", "--mlr", default=8, type=int)
-    parser.add_argument("--load_format", "-lf", default="auto")
+    parser.add_argument("--load_format", default="auto")
     args = parser.parse_args()
     vllm_main(args)
 
