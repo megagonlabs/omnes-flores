@@ -10,6 +10,29 @@ from vllm.transformers_utils.tokenizer import MistralTokenizer
 from vllm.v1.engine.llm_engine import LLMEngine as LLMEngineV1
 
 
+def main():
+    parser = ArgumentParser()
+    parser.add_argument("--model_name_or_path", "--m", type=str, default="google/gemma-2-9b")
+    parser.add_argument("--adapter_name_or_path", "--m", type=str, default="megagonlabs/omnes-flores-40-lang-41-treebank-v0-ud")
+    parser.add_argument("--input_text", "--it", type=str)
+    parser.add_argument("--input_sentence", "--is", type=str)
+    parser.add_argument("--input_language", "--il", type=str)
+    parser.add_argument("--output_conllu", "--o", type=str)
+    parser.add_argument("--temperature", "--t", type=float, default=0.)
+    parser.add_argument("--dtype", default="bfloat16")
+    parser.add_argument("--max_model_len", default=4096, type=int)
+    parser.add_argument("--gpu_memory_utilization", "--gmu", default=0.9, type=float)
+    parser.add_argument("--tensor_parallel_size", "--tp", default=1, type=int)
+    parser.add_argument("--num_scheduler_steps", "--ss", default=8, type=int)
+    parser.add_argument("--enable_prefix_caching", "--pc", action="store_true")
+    parser.add_argument("--enforce_eager", action="store_true")
+    parser.add_argument("--quantization", "--q")
+    parser.add_argument("--max_lora_rank", "--mlr", default=8, type=int)
+    parser.add_argument("--load_format", "-lf", default="auto")
+    args = parser.parse_args()
+    vllm_main(args)
+
+
 def vllm_main(args):
     print(f"loading model: {args}")
     llm = LLM(
@@ -50,29 +73,6 @@ def vllm_main(args):
         logger.debug("\n" + content_text)
     print()
     """
-
-
-def main():
-    parser = ArgumentParser()
-    parser.add_argument("--model_name_or_path", "--m", type=str, default="google/gemma-2-9b")
-    parser.add_argument("--adapter_name_or_path", "--m", type=str, default="megagonlabs/omnes-flores-40-lang-41-treebank-v0-ud")
-    parser.add_argument("--input_text", "--it", type=str)
-    parser.add_argument("--input_sentence", "--is", type=str)
-    parser.add_argument("--input_language", "--il", type=str)
-    parser.add_argument("--output_conllu", "--o", type=str)
-    parser.add_argument("--temperature", "--t", type=float, default=0.)
-    parser.add_argument("--dtype", default="bfloat16")
-    parser.add_argument("--max_model_len", default=4096, type=int)
-    parser.add_argument("--gpu_memory_utilization", "--gmu", default=0.9, type=float)
-    parser.add_argument("--tensor_parallel_size", "--tp", default=1, type=int)
-    parser.add_argument("--num_scheduler_steps", "--ss", default=8, type=int)
-    parser.add_argument("--enable_prefix_caching", "--pc", action="store_true")
-    parser.add_argument("--enforce_eager", action="store_true")
-    parser.add_argument("--quantization", "--q")
-    parser.add_argument("--max_lora_rank", "--mlr", default=8, type=int)
-    parser.add_argument("--load_format", "-lf", default="auto")
-    args = parser.parse_args()
-    vllm_main(args)
 
 
 if __name__ == "__main__":
