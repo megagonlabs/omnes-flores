@@ -1,1 +1,1 @@
-# omnes flores: A Unified LLM-Based Framework for NLP
+# omnes-flores: A Unified LLM-Based NLP Framework

@@ -1,6 +1,6 @@
-title: "omnes flores: A Unified LLM-Based Framework for NLP"
+title: "omnes-flores: A Unified LLM-Based NLP Framework"
 logo: "https://github.com/megagonlabs/omnes-flores/raw/main/docs/images/omnes-flores-logo_arc_title.png"
 description: "LLM-based multilingual NLP for language identification, sentence segmentation, tokenization, POS tagging, and dependency parsing. Includes a commercial-use model for 40 languages."
-show_downloads: true
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
