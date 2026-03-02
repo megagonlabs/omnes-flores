@@ -7,7 +7,7 @@ readme = "README.md"
 license = {file = "LICENSE"}
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
-    "Environment :: GPU :: NVIDIA CUDA :: 12 :: 12.8",
+    "Environment :: GPU :: NVIDIA CUDA :: 12",
     "Framework :: Sphinx :: Extension",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: Apache Software License",
