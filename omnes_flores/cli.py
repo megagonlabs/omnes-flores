@@ -52,7 +52,7 @@ def vllm_main(args):
     lora_request = LoRARequest("adapter", 1, args.adapter_name_or_path)
     sampling_params = SamplingParams(
         temperature=args.temperature,
-        max_tokens=args.max_tokens,
+        max_tokens=args.max_model_len,
     )
     print(f"model loaded")
     """
