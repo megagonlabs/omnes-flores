@@ -1,0 +1,81 @@
+[base]
+model = "google/gemma-2-9b"
+tokenizer = "megagonlabs/omnes-flores-40-lang-41-treebank-v0-ud"
+
+[ls]
+adapter = "megagonlabs/omnes-flores-40-lang-41-treebank-v0-ls"
+[ls.dialog_template]
+[[ls.dialog_template.messages]]
+role = "user"
+template = """
+You are an expert in natural language processing.
+We will now perform language identification and sentence delimitation.
+First, output the language identification result of the input text, then after a blank line, output the sentence delimitation result.
+
+input text:
+<<<TEXT>>>
+"""
+[[ls.dialog_template.outputs]]
+language.line_index = 0
+sentences.line_begin = 2
+
+[wx]
+adapter = "megagonlabs/omnes-flores-40-lang-41-treebank-v0-wx"
+[wx.dialog_template]
+[[wx.dialog_template.messages]]
+role = "user"
+template = """
+You are a linguist and specialize in tokenization based on Universal Dependencies.
+We will now perform tokenization and part-of-speech tagging on <<<LANGUAGE>>> sentence.
+Split the input sentence into words with the word indexes from 1 in TSV format, and add a field of part-of-speech tag.
+
+input sentence:
+<<<SENTENCE>>>
+"""
+[[wx.dialog_template.outputs]]
+tokens.line_begin = 0
+tokens.format.type = "tsv"
+[[wx.dialog_template.outputs.tokens.fields]]
+index = 0
+name = "INDEX"
+type = "int"
+auto_correct = "begin_from_1"
+[[wx.dialog_template.outputs.tokens.fields]]
+index = 1
+name = "FORMWS"
+
+[ud]
+adapter = "megagonlabs/omnes-flores-40-lang-41-treebank-v0-ud"
+[ud.dialog_template]
+[[ud.dialog_template.messages]]
+role = "user"
+template = """
+You are a linguist and specialize in dependency parsing based on Universal Dependencies.
+We will now perform dependency parsing on <<<LANGUAGE>>> sentence.
+After splitting the input sentence into words with indexes as shown below, create a TSV with four fields: word index from 1 to <<<TOKEN_NUM>>> + part of speech + the dependent word index + the Universal Dependencies relation.
+However, for the word that is the main predicate of the sentence, the dependent word index should be 0.
+
+input sentence:
+<<<SENTENCE>>>
+
+indexes and words:
+<<<TOKEN_TSV:INDEX_FORMWS>>>
+"""
+[[ud.dialog_template.outputs]]
+tokens.line_begin = 0
+tokens.format.type = "tsv"
+[[ud.dialog_template.outputs.tokens.fields]]
+index = 0
+name = "INDEX"
+type = "int"
+auto_correct = "begin_from_1"
+[[ud.dialog_template.outputs.tokens.fields]]
+index = 1
+name = "UPOS"
+[[ud.dialog_template.outputs.tokens.fields]]
+index = 2
+name = "HEAD"
+type = "int"
+[[ud.dialog_template.outputs.tokens.fields]]
+index = 3
+name = "DEPREL"
