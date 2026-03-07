@@ -1,32 +1,32 @@
 [project]
 name = "omnes-flores"
-dynamic = ["version"]
+authors = [{name = "Megagon Labs, Tokyo.", email = "ginza@megagon.ai"}]
 description = "omnes-flores: A Unified NLP Framework for LLMs"
-authors = [{name = "Hiroshi Matsuda", email = "hiroshi_matsuda@megagon.ai"}]
-readme = "README.md"
-license = {file = "LICENSE"}
+dynamic = ["version"]
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.10"
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
-    "Environment :: GPU :: NVIDIA CUDA :: 12",
     "Framework :: Sphinx :: Extension",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
     "Topic :: Text Processing :: Linguistic",
 ]
-keywords = ["omnes-flores", "universal dependencies", "UD", "natural language processing", "NLP"]
-requires-python = ">=3.11"
 dependencies = [
-    "vllm==0.11.0",
-    "transformers==4.57.0",
+    "vllm==0.16.0",
+    "transformers==4.57.6",
 ]
-
-[project.urls]
-Documentation = "https://megagonlabs.github.io/omnes-flores/"
-Repository = "https://github.com/megagonlabs/omnes-flores"
+keywords = ["omnes-flores", "universal dependencies", "UD", "natural language processing", "NLP"]
 
 [project.optional-dependencies]
 docs = [
@@ -34,11 +34,16 @@ docs = [
 dev = [
 ]
 
-[build-system]
-requires = ["flit_core"]
-build-backend = "flit_core.buildapi"
+[project.urls]
+Homepage = "https://megagonlabs.github.io/omnes-flores/"
+Repository = "https://github.com/megagonlabs/omnes-flores"
 
-[tool.flit.sdist]
-include = ["omnes_flores/"]
-exclude = [
-]
+[project.scripts]
+mones-flores = "omnes_flores.cli:main"
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"omnes_flores" = "omnes_flores"}
