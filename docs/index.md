@@ -1,4 +1,4 @@
-# omnes-flores ![favicon.ico](https://github.com/megagonlabs/omnes-flores/raw/main/docs/favicon.ico) -  Technology Preview
+# Technology Preview
 
 **A Unified NLP Framework for LLMs.**
 
@@ -277,15 +277,15 @@ In addition, the following 59 treebanks have been added to the training in this 
 
 The analysis pipeline components use following prompts:
 
-<img src="./images/prompt_ls.png" style="width: 75%; height: auto;">
+<img src="./images/prompt_ls.png" style="width: 50%; height: auto;">
 
 Figure 1: An example of `language identification` and `sentence segmentation` prompt instance. The parts that change from instance to instance are shown in _Italic_. The SHADED REGION in the assistant-role corresponds to the range over which the loss gradient is computed during training, and to the decoded text during inference. At inference time, the span from the system-role up to the assistant-role header is provided as input, and decoding of the subsequent segment continues until `<eos>` is generated.
 
-<img src="./images/prompt_wx.png" style="width: 75%; height: auto;">
+<img src="./images/prompt_wx.png" style="width: 50%; height: auto;">
 
 Figure 2: An example of `word segmentation` and `language-specific part-of-speech tagging` prompt instance.
 
-<img src="./images/prompt_ud.png" style="width: 75%; height: auto;">
+<img src="./images/prompt_ud.png" style="width: 50%; height: auto;">
 
 Figure 3: An example of `dependency parsing` prompt instance.
 
