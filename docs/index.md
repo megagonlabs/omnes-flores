@@ -58,6 +58,16 @@ This model is made available for non-commercial use, including academic use; com
 omnes-flores --m megagonlabs/omnes-flores-84-lang-99-treebank-non-commercial-v0 < text_file > conllu_file
 ```
 
+## Method
+
+We use following prompts for three analysis components:
+
+![prompt_ls.png](./images/prompt_ls.png)
+
+![prompt_wx.png](./images/prompt_wx.png)
+
+![prompt_ud.png](./images/prompt_ud.png)
+
 ## [Version History](https://github.com/megagonlabs/omnes-flores/releases)
 
 ### 0.1.0-alpha
