@@ -71,8 +71,6 @@ Figure 1: An example of `language identification` and `sentence segmentation` pr
 Figure 2: An example of `word segmentation` and `language-specific part-of-speech tagging` prompt instance.
 
 <img src="./images/prompt_ud.png" style="width: 75%; height: auto;">
-
-![prompt_ud.png](./images/prompt_ud.png)
 Figure 3: An example of `dependency parsing` prompt instance.
 
 ## [Version History](https://github.com/megagonlabs/omnes-flores/releases)
