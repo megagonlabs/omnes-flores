@@ -1,7 +1,16 @@
-title: "omnes-flores Technology Preview"
-author: "Megagon Labs, Tokyo."
-email: "ginza@megagon.ai"
-description: "A unified NLP framework for LLMs."
-github_username: "megagonlabs"
-twitter_username: "MegagonLabs"
-remote_theme: "jekyll/minima@1e8a445"
+title: omnes-flores Technology Preview
+author:
+  name: megagonlabs
+  email: ginza@megagon.ai
+description: A unified NLP framework for LLMs.
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+minima:
+  social_links:
+    - title: Megagon Labs
+      icon: github
+      url: "https://github.com/megagonlabs"
+    - title: Megagon Labs
+      icon: x-twitter
+      url: "https://x.com/MegagonLabs"
