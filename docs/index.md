@@ -1,6 +1,4 @@
-# Technology Preview
-
- ![omnes-flores-logo_arc_title.png](https://github.com/megagonlabs/omnes-flores/raw/main/docs/images/omnes-flores-logo_arc_title.png)
+<img src="https://github.com/megagonlabs/omnes-flores/raw/main/docs/images/omnes-flores-logo_arc_title.png" style="width: 50%; height: auto;">
 
 **A Unified NLP Framework for LLMs.**
 
