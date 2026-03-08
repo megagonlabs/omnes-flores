@@ -1,8 +1,11 @@
-title: "omnes-flores"
-baseurl: "/omnes-flores"
-url: "https://megagonlabs.github.io"
-logo: "https://github.com/megagonlabs/omnes-flores/raw/main/docs/images/omnes-flores-logo_arc_title.png"
-description: "A Unified NLP Framework for LLMs."
-show_downloads: false
-google_analytics:
+title: "omnes-flores Technology Preview"
+author: "Megagon Labs, Tokyo."
+email: "ginza@megagon.ai"
+description: "A unified NLP framework for LLMs."
+github_username: "megagonlabs"
+twitter_username: "MegagonLabs"
 remote_theme: "jekyll/minima@1e8a445"
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-remote-theme
