@@ -2,10 +2,7 @@ title: "omnes-flores: A Unified NLP Framework for LLMs"
 author:
   name: megagonlabs
   email: ginza@megagon.ai
-remote_theme: jekyll/minima@d4d779a
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+theme: minima
 minima:
   social_links:
     - title: Megagon Labs
