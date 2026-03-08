@@ -106,7 +106,7 @@ $ omnes-flores --m megagonlabs/omnes-flores-40-lang-42-treebank-v0 < text_file >
 
 This model is available for commercial use.
 
-This model uses the Corpus of Everyday Japanese Conversation (CEJC) as part of training data, and uses SUW as the Japanese word unit in order to handle non-sentence contexts contained in fragmented speech.  
+This model uses the `Corpus of Everyday Japanese Conversation` (CEJC) as part of training data, and uses SUW as the Japanese word unit in order to handle non-sentence contexts contained in fragmented speech.  
 (本モデルは訓練データの一部に日本語日常会話コーパスを使用しており、日常会話の断片的な発話に含まれる非文法的な文脈に対応するために、日本語の単語分割基準には文節構造を前提としない[国語研短単位](https://clrd.ninjal.ac.jp/bccwj/morphology.html#02)を用いています。)
 
 The following 40 UD treebanks, which have both a commercially available license and over 40k UD tokens in the train set, were select to train the LoRA models of `omnes-flores-40-lang-42-treebank-v0`.
@@ -279,7 +279,7 @@ The analysis pipeline components use following prompts:
 
 <img src="./images/prompt_ls.png" style="width: 75%; height: auto;">
 
-Figure 1: An example of `language identification` and `sentence segmentation` prompt instance. The parts that change from instance to instance are shown in **BOLD**. The SHADED REGION in the assistant-role corresponds to the range over which the loss gradient is computed during training, and to the decoded text during inference. At inference time, the span from the system-role up to the assistant-role header is provided as input, and decoding of the subsequent segment continues until `<eos>` is generated.
+Figure 1: An example of `language identification` and `sentence segmentation` prompt instance. The parts that change from instance to instance are shown in _Italic_. The SHADED REGION in the assistant-role corresponds to the range over which the loss gradient is computed during training, and to the decoded text during inference. At inference time, the span from the system-role up to the assistant-role header is provided as input, and decoding of the subsequent segment continues until `<eos>` is generated.
 
 <img src="./images/prompt_wx.png" style="width: 75%; height: auto;">
 
