@@ -271,30 +271,6 @@ In addition, the following 59 treebanks have been added to the training in this 
 [UD_Yiddish-YiTB](https://github.com/UniversalDependencies/UD_Yiddish-YiTB)
 [UD_Zaar-Autogramm](https://github.com/UniversalDependencies/UD_Zaar-Autogramm)
 
-## Method
-
-The analysis pipeline components use following prompts:
-
-<img src="./images/prompt_ls.png" style="width: 75%; height: auto;">
-
-Figure 1: An example of `language identification` and `sentence segmentation` prompt instance. The parts that change from instance to instance are shown in _Italic_. The SHADED REGION in the assistant-role corresponds to the range over which the loss gradient is computed during training, and to the decoded text during inference. At inference time, the span from the system-role up to the assistant-role header is provided as input, and decoding of the subsequent segment continues until `<eos>` is generated.
-
-<img src="./images/prompt_wx.png" style="width: 75%; height: auto;">
-
-Figure 2: An example of `word segmentation` and `language-specific part-of-speech tagging` prompt instance.
-
-<img src="./images/prompt_ud.png" style="width: 75%; height: auto;">
-
-Figure 3: An example of `dependency parsing` prompt instance.
-
-### Evaluation Result
-
-[![omnes-flores-40-lang-41-treebank-v0-eval.png](./images/omnes-flores-40-lang-41-treebank-v0-eval.png)](./images/omnes-flores-40-lang-41-treebank-v0-eval.png)
-
-Figure 4: Accuracy of the proposed method and UDPipe2 on 41 treebanks (average of 4 trials ± sample standard deviation). Yellow highlights indicate relatively small training data or relatively low accuracy. Green highlights indicate relatively large sample standard deviation.
-
-Read the [NLP2026 paper (多言語統語解析処理のためのMulti-task LoRA SFT方式の評価)](https://github.com/megagonlabs/omnes-flores/raw/main/docs/images/NLP2026_TS2-16_paper.pdf) and its [poster material](https://github.com/megagonlabs/omnes-flores/raw/main/docs/images/NLP2026_TS2-16_poster.pdf) (written in Japanese) for details.
-
 ## Acknowledgements
 
 This work was conducted as part of a collaborative research project between Recruit Co., Ltd. and the [National Institute for Japanese Language and Linguistics](https://www.ninjal.ac.jp/english/).
