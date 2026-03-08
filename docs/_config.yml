@@ -1,8 +1,8 @@
-title: "omnes-flores ![favicon.ico](https://github.com/megagonlabs/omnes-flores/raw/main/docs/favicon.ico)"
+title: "omnes-flores"
 baseurl: "/omnes-flores"
 url: "https://megagonlabs.github.io"
 logo: "https://github.com/megagonlabs/omnes-flores/raw/main/docs/images/omnes-flores-logo_arc_title.png"
 description: "A Unified NLP Framework for LLMs."
 show_downloads: false
 google_analytics:
-remote_theme: "jekyll/minima"
+remote_theme: "jekyll/minima@1e8a445"
