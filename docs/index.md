@@ -1,4 +1,4 @@
-# omnes-flores Technology Preview
+# omnes-flores ![favicon.ico](https://github.com/megagonlabs/omnes-flores/raw/main/docs/favicon.ico) -  Technology Preview
 
 **A Unified NLP Framework for LLMs.**
 
