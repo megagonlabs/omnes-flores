@@ -60,7 +60,7 @@ omnes-flores --m megagonlabs/omnes-flores-84-lang-99-treebank-non-commercial-v0 
 
 ## Method
 
-We use following prompts for three analysis components:
+The analysis pipeline components use following prompts:
 
 <img src="./images/prompt_ls.png" style="width: 75%; height: auto;">
 
