@@ -62,15 +62,15 @@ omnes-flores --m megagonlabs/omnes-flores-84-lang-99-treebank-non-commercial-v0 
 
 We use following prompts for three analysis components:
 
-<img src="./images/prompt_ls.png" style="width: 50%; height: auto;">
+<img src="./images/prompt_ls.png" style="width: 75%; height: auto;">
 
 Figure 1: An example of `language identification` and `sentence segmentation` prompt instance. The parts that change from instance to instance are shown in **BOLD**. The SHADED REGION in the assistant-role corresponds to the range over which the loss gradient is computed during training, and to the decoded text during inference. At inference time, the span from the system-role up to the assistant-role header is provided as input, and decoding of the subsequent segment continues until `<eos>` is generated.
 
-<img src="./images/prompt_wx.png" style="width: 50%; height: auto;">
+<img src="./images/prompt_wx.png" style="width: 75%; height: auto;">
 
 Figure 2: An example of `word segmentation` and `language-specific part-of-speech tagging` prompt instance.
 
-<img src="./images/prompt_ud.png" style="width: 50%; height: auto;">
+<img src="./images/prompt_ud.png" style="width: 75%; height: auto;">
 
 ![prompt_ud.png](./images/prompt_ud.png)
 Figure 3: An example of `dependency parsing` prompt instance.
