@@ -32,7 +32,7 @@ Installing the library is very simple like:
 pip install omnes-flores
 ```
 
-## Use Models
+## Models
 
 ### `40-lang-41-treebank-v0` (CC BY-SA 4.0)
 
