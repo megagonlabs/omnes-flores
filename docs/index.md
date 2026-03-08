@@ -38,6 +38,9 @@ pip install omnes-flores
 
 This model is available for commercial use.
 
+The Japanese word unit is LUW.  
+(日本語の単語分割基準は[国語研長単位](https://clrd.ninjal.ac.jp/bccwj/morphology.html#06)です。)
+
 ```Console
 omnes-flores < text_file > conllu_file
 ```
@@ -46,6 +49,9 @@ omnes-flores < text_file > conllu_file
 
 This model is available for commercial use.
 
+This model uses the Corpus of Everyday Japanese Conversation (CEJC) as part of training data, and uses SUW as the Japanese word unit in order to handle non-sentence contexts contained in fragmented speech.  
+(本モデルは訓練データの一部に日本語日常会話コーパスを使用しており、日常会話の断片的な発話に含まれる非文法的な文脈に対応するために、日本語の単語分割基準には文節構造を前提としない[国語研短単位](https://clrd.ninjal.ac.jp/bccwj/morphology.html#02)を用いています。)
+
 ```Console
 omnes-flores --m megagonlabs/omnes-flores-40-lang-42-treebank-v0 < text_file > conllu_file
 ```
@@ -53,6 +59,10 @@ omnes-flores --m megagonlabs/omnes-flores-40-lang-42-treebank-v0 < text_file > c
 ### `84-lang-99-treebank-non-commercial-v0` (CC BY-NC-SA 4.0)
 
 This model is made available for non-commercial use, including academic use; commercial use is strictly prohibited.
+
+
+The Japanese word unit is LUW.  
+(日本語の単語分割基準は国語研長単位です。)
 
 ```Console
 omnes-flores --m megagonlabs/omnes-flores-84-lang-99-treebank-non-commercial-v0 < text_file > conllu_file
