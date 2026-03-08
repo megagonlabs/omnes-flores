@@ -1,3 +1,6 @@
+---
+layout: home
+---
 # Technology Preview
 
 <img src="https://github.com/megagonlabs/omnes-flores/raw/main/docs/images/omnes-flores-logo_arc_title.png" style="width: 25%; height: auto;">
