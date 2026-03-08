@@ -1,6 +1,8 @@
-# omnes-flores Technology Preview
+# <img src="https://github.com/megagonlabs/omnes-flores/raw/main/docs/favicon.ico"> omnes-flores
 
-**A Unified NLP Framework for LLMs.**
+A Unified NLP Framework for LLMs.
+
+[![Downloads](https://pepy.tech/badge/omnes-flores/week)](https://pepy.tech/project/omnes-flores)
 
 ## Terms of Use
 
@@ -31,18 +33,54 @@ We are planning to support Apple Silicon (MLX) in the near future.
 Installing the library is very simple like:
 
 ```Console
+$ python3 -m venv venv
+$ source venv/bin/activate
 $ pip install omnes-flores
 ```
 
-## Models
+### Setup HuggingFace
+
+To use the base model `google/gemma-2-9b`, you have to agree to the terms of use by following the steps below:
+- [Log in to HuggingFace](https://huggingface.co/login) with your huggingface account.
+- Open`[`google/gemma-2-9b`](https://huggingface.co/google/gemma-2-9b)` page.
+- Read the descriptions in `Access Gemma on Hugging Face` panel and proceed to `Acknowledge license` if you agree to the contract.
+
+Next, login to `huggingface-cli` with a access token of your huggingface account, like:
+- Open `[Access Tokens]` page and push `+ Create new token` button.
+- In the `User permissions (your-account-name)` section of `Create new Access Token` page:
+  - Select `Fine-grained` in `Token type` field (default).
+  - Fill `read-gated-repos` in the `read-gated-repos` field.
+  - Check the following items in `Repositories` section.
+    - `Read access to contents of all repos under your personal namespace`
+    - `View access requests for all gated repos under your personal namespace`
+    - `Read access to contents of all public gated repos you can access`
+  - Push the bottom side `Create token` button.
+  - In the `Save your Access Token` dialog, copy the access token beginning with `hf_` by pushing the `Copy` button and then save it in appropriate secure place.
+- From the Python environment which you installed `omnes-flores`, execute `hf auth login` and paste the access token.
+  - If the login is successful, the following will be displayed:
+```console
+$ hf auth login
+...
+Enter your token (input will not be visible): 
+...
+Login successful.
+The current active token is: `read-gated-repos`
+```
+
+## Run Models
 
 ### `40-lang-41-treebank-v0` (CC BY-SA 4.0)
+
+This model is available for commercial use.
 
 ```Console
 $ omnes-flores < text_file > conllu_file
 ```
 
-This model is available for commercial use.
+In the above code, the input `text_file` is plain text regardless of language, and sentence separation by line breaks is not required.
+To improve the inference efficiency, the input is automatically batched, but batch is always separated by blank lines in the input.
+When processing interactively via standard input, you can press `Enter` twice to get immediate inference.
+For the details of output CoNLL-U format, read the [Universal Dependencies official page](https://universaldependencies.org/format.html).
 
 This model was trained using training data from 40 UD languages, consisting of 41 treebanks.
 
@@ -98,11 +136,11 @@ In addition, a proprietary treebank was used for training, which were specially 
 
 ### `40-lang-42-treebank-v0` (CC BY-SA 4.0)
 
+This model is available for commercial use.
+
 ```Console
 $ omnes-flores --m megagonlabs/omnes-flores-40-lang-42-treebank-v0 < text_file > conllu_file
 ```
-
-This model is available for commercial use.
 
 This model uses the `Corpus of Everyday Japanese Conversation` (CEJC) as part of training data, and uses SUW as the Japanese word unit in order to handle non-sentence contexts contained in fragmented speech.  
 (本モデルは訓練データの一部に日本語日常会話コーパスを使用しており、日常会話の断片的な発話に含まれる非文法的な文脈に対応するために、日本語の単語分割基準には文節構造を前提としない[国語研短単位](https://clrd.ninjal.ac.jp/bccwj/morphology.html#02)を用いています。)
@@ -157,11 +195,11 @@ In addition, the following datasets were used for training, which were specially
 
 ### `84-lang-99-treebank-non-commercial-v0` (CC BY-NC-SA 4.0)
 
+This model is made available for non-commercial use, including academic use; commercial use is strictly prohibited.
+
 ```Console
 $ omnes-flores --m megagonlabs/omnes-flores-84-lang-99-treebank-non-commercial-v0 < text_file > conllu_file
 ```
-
-This model is made available for non-commercial use, including academic use; commercial use is strictly prohibited.
 
 The Japanese word unit is LUW.  
 (日本語の単語分割基準は[国語研長単位](https://clrd.ninjal.ac.jp/bccwj/morphology.html#06)です。)
