@@ -291,7 +291,7 @@ Figure 3: An example of `dependency parsing` prompt instance.
 
 ### Evaluation Result
 
-[![omnes-flores-40-lang-41-treebank-v0-eval.png](./images/omnes-flores-40-lang-41-treebank-v0-eval.png)(./images/omnes-flores-40-lang-41-treebank-v0-eval.png)]
+[![omnes-flores-40-lang-41-treebank-v0-eval.png](./images/omnes-flores-40-lang-41-treebank-v0-eval.png)](./images/omnes-flores-40-lang-41-treebank-v0-eval.png)
 
 Figure 4: Accuracy of the proposed method and UDPipe2 on 41 treebanks (average of 4 trials ± sample standard deviation). Yellow highlights indicate relatively small training data or relatively low accuracy. Green highlights indicate relatively large sample standard deviation.
 
