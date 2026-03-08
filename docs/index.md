@@ -33,7 +33,7 @@ We are planning to support Apple Silicon (MLX) in the near future.
 Installing the library is very simple like:
 
 ```Console
-pip install omnes-flores
+$ pip install omnes-flores
 ```
 
 ## Models
@@ -41,7 +41,7 @@ pip install omnes-flores
 ### `40-lang-41-treebank-v0` (CC BY-SA 4.0)
 
 ```Console
-omnes-flores < text_file > conllu_file
+$ omnes-flores < text_file > conllu_file
 ```
 
 This model is available for commercial use.
@@ -50,6 +50,7 @@ This model was trained using training data from 40 UD languages, consisting of 4
 
 The Japanese word unit is LUW.  
 (日本語の単語分割基準は[国語研長単位](https://clrd.ninjal.ac.jp/bccwj/morphology.html#06)です。)
+
 The following 40 UD treebanks, which have both a commercially available license and over 40k UD tokens in the train set, were select to train the LoRA models of `omnes-flores-40-lang-41-treebank-v0`.
 
 - [UD_Armenian-ArmTDP](https://github.com/UniversalDependencies/UD_Armenian-ArmTDP),
@@ -100,7 +101,7 @@ In addition, a proprietary treebank was used for training, which were specially 
 ### `40-lang-42-treebank-v0` (CC BY-SA 4.0)
 
 ```Console
-omnes-flores --m megagonlabs/omnes-flores-40-lang-42-treebank-v0 < text_file > conllu_file
+$ omnes-flores --m megagonlabs/omnes-flores-40-lang-42-treebank-v0 < text_file > conllu_file
 ```
 
 This model is available for commercial use.
@@ -159,7 +160,7 @@ In addition, the following datasets were used for training, which were specially
 ### `84-lang-99-treebank-non-commercial-v0` (CC BY-NC-SA 4.0)
 
 ```Console
-omnes-flores --m megagonlabs/omnes-flores-84-lang-99-treebank-non-commercial-v0 < text_file > conllu_file
+$ omnes-flores --m megagonlabs/omnes-flores-84-lang-99-treebank-non-commercial-v0 < text_file > conllu_file
 ```
 
 This model is made available for non-commercial use, including academic use; commercial use is strictly prohibited.
@@ -290,7 +291,7 @@ Figure 3: An example of `dependency parsing` prompt instance.
 
 ### Evaluation Result
 
-![omnes-flores-40-lang-41-treebank-v0-eval.png](./images/omnes-flores-40-lang-41-treebank-v0-eval.png)
+[![omnes-flores-40-lang-41-treebank-v0-eval.png](./images/omnes-flores-40-lang-41-treebank-v0-eval.png)(./images/omnes-flores-40-lang-41-treebank-v0-eval.png)]
 
 Figure 4: Accuracy of the proposed method and UDPipe2 on 41 treebanks (average of 4 trials ± sample standard deviation). Yellow highlights indicate relatively small training data or relatively low accuracy. Green highlights indicate relatively large sample standard deviation.
 
