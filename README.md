@@ -1,4 +1,4 @@
-# <img src="https://github.com/megagonlabs/omnes-flores/raw/main/docs/favicon.ico"> omnes-flores
+# <img src="https://github.com/megagonlabs/omnes-flores/raw/main/docs/favicon.ico"> omnes-flores (technology preview)
 
 A Unified NLP Framework for LLMs.
 
