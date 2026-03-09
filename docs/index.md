@@ -50,7 +50,7 @@ To use the base model `google/gemma-2-9b`, you have to agree to the terms of use
 - Open [`google/gemma-2-9b`](https://huggingface.co/google/gemma-2-9b) page.
 - Read the descriptions in `Access Gemma on Hugging Face` panel and proceed to `Acknowledge license` if you agree to the contract.
 
-Next, generate you access token in huggingface account settings page:
+Next, generate your access token in huggingface account settings page:
 - Open [`Access Tokens`](https://huggingface.co/settings/tokens) page and then push `+ Create new token` button.
 - In the `User permissions (your-account-name)` section of `Create new Access Token` page:
   - Select `Fine-grained` in `Token type` field (default).
