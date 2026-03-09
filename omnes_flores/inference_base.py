@@ -35,7 +35,7 @@ class InferenceBase:
         if not text_list:
             return []
         total_char = sum(len(_["TEXT"]) for _ in text_list)
-        print_log(f"LS: {len(text_list)} target(s), {total_char} total char (TEXT: {text_list[0]["TEXT"][:15]}...)")
+        print_log(f"LS: {len(text_list)} target(s), {total_char} total char (TEXT: {text_list[0]['TEXT'][:15]}...)")
         results = self.infer_and_parse("LS", text_list, max_tokens, temperature)
         language_sentence_list = [
             {
