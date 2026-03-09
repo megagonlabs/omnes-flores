@@ -42,11 +42,11 @@ $ pip install omnes-flores
 
 To use the base model `google/gemma-2-9b`, you have to agree to the terms of use by following the steps below:
 - [Log in to HuggingFace](https://huggingface.co/login) with your huggingface account.
-- Open`[`google/gemma-2-9b`](https://huggingface.co/google/gemma-2-9b)` page.
+- Open [`google/gemma-2-9b`](https://huggingface.co/google/gemma-2-9b) page.
 - Read the descriptions in `Access Gemma on Hugging Face` panel and proceed to `Acknowledge license` if you agree to the contract.
 
-Next, login to `huggingface-cli` with a access token of your huggingface account, like:
-- Open `[Access Tokens]` page and push `+ Create new token` button.
+Next, generate you access token in huggingface account settings page:
+- Open [`Access Tokens`](https://huggingface.co/settings/tokens) page and then push `+ Create new token` button.
 - In the `User permissions (your-account-name)` section of `Create new Access Token` page:
   - Select `Fine-grained` in `Token type` field (default).
   - Fill `read-gated-repos` in the `read-gated-repos` field.
@@ -56,6 +56,8 @@ Next, login to `huggingface-cli` with a access token of your huggingface account
     - `Read access to contents of all public gated repos you can access`
   - Push the bottom side `Create token` button.
   - In the `Save your Access Token` dialog, copy the access token beginning with `hf_` by pushing the `Copy` button and then save it in appropriate secure place.
+
+Finally, login via CLI with an access token, like:
 - From the Python environment which you installed `omnes-flores`, execute `hf auth login` and paste the access token.
   - If the login is successful, the following will be displayed:
 ```console
@@ -87,7 +89,7 @@ This model was trained using training data from 40 UD languages, consisting of 4
 The Japanese word unit is LUW.  
 (日本語の単語分割基準は[国語研長単位](https://clrd.ninjal.ac.jp/bccwj/morphology.html#06)です。)
 
-The following 40 UD treebanks, which have both a commercially available license and over 40k UD tokens in the train set, were select to train the LoRA models of `omnes-flores-40-lang-41-treebank-v0`.
+The following 40 UD treebanks, which have both a commercially available license and over 40k UD tokens in the train set, were selected to train the LoRA models of `omnes-flores-40-lang-41-treebank-v0`.
 
 - [UD_Armenian-ArmTDP](https://github.com/UniversalDependencies/UD_Armenian-ArmTDP),
 [UD_Belarusian-HSE](https://github.com/UniversalDependencies/UD_Belarusian-HSE),
@@ -145,7 +147,7 @@ $ omnes-flores --m megagonlabs/omnes-flores-40-lang-42-treebank-v0 < text_file >
 This model uses the `Corpus of Everyday Japanese Conversation` (CEJC) as part of training data, and uses SUW as the Japanese word unit in order to handle non-sentence contexts contained in fragmented speech.  
 (本モデルは訓練データの一部に日本語日常会話コーパスを使用しており、日常会話の断片的な発話に含まれる非文法的な文脈に対応するために、日本語の単語分割基準には文節構造を前提としない[国語研短単位](https://clrd.ninjal.ac.jp/bccwj/morphology.html#02)を用いています。)
 
-The following 40 UD treebanks, which have both a commercially available license and over 40k UD tokens in the train set, were select to train the LoRA models of `omnes-flores-40-lang-42-treebank-v0`.
+The following 40 UD treebanks, which have both a commercially available license and over 40k UD tokens in the train set, were selected to train the LoRA models of `omnes-flores-40-lang-42-treebank-v0`.
 
 - [UD_Armenian-ArmTDP](https://github.com/UniversalDependencies/UD_Armenian-ArmTDP),
 [UD_Belarusian-HSE](https://github.com/UniversalDependencies/UD_Belarusian-HSE),
@@ -204,7 +206,7 @@ $ omnes-flores --m megagonlabs/omnes-flores-84-lang-99-treebank-non-commercial-v
 The Japanese word unit is LUW.  
 (日本語の単語分割基準は[国語研長単位](https://clrd.ninjal.ac.jp/bccwj/morphology.html#06)です。)
 
-The following 40 UD treebanks, which have both a commercially available license and over 40k UD tokens in the train set, were select to train the LoRA models of `omnes-flores-84-lang-99-treebank-non-commercial-v0`.
+The following 40 UD treebanks, which have both a commercially available license and over 40k UD tokens in the train set, were selected to train the LoRA models of `omnes-flores-84-lang-99-treebank-non-commercial-v0`.
 
 - [UD_Armenian-ArmTDP](https://github.com/UniversalDependencies/UD_Armenian-ArmTDP)
 [UD_Belarusian-HSE](https://github.com/UniversalDependencies/UD_Belarusian-HSE)
