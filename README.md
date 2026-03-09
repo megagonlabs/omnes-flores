@@ -4,6 +4,8 @@ A Unified NLP Framework for LLMs.
 
 [![Downloads](https://pepy.tech/badge/omnes-flores/week)](https://pepy.tech/project/omnes-flores)
 
+Please also view the [official `omnes-floes` site](https://megagonlabs.github.io/omnes-flores#method) for details of proposed method and evaluation result.
+
 ## Terms of Use
 
 The `omnes-flores` Python module is published under [Apache License Version 2.0](./LICENSE) and the dedicated models for `omnes-flores` are distributed under the license inherited from the Universal Dependencies treebanks used for training.
