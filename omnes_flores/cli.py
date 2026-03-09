@@ -82,9 +82,9 @@ def analyze(choice, output_format, model, lines, file):
     if output_format == "conllu":
         for r in results:
             if "LANGUAGE" in r:
-                print(f"# language = {r["LANGUAGE"]}", file=file)
+                print(f'# language = {r["LANGUAGE"]}', file=file)
             if "SENTENCE" in r:
-                print(f"# text = {r["SENTENCE"]}", file=file)
+                print(f'# text = {r["SENTENCE"]}', file=file)
             if "TOKENS" in r:
                 for i, t in enumerate(r["TOKENS"], 1):
                     misc = t.get("MISC", [])
