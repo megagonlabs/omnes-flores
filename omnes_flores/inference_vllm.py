@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 if os.getenv("VLLM_CONFIGURE_LOGGING") is None and os.getenv("VLLM_LOGGING_CONFIG_PATH") is None:
-    vllm_logging_config_path = f"{Path(__file__).parent}/resources/vllm_logging_config.json"
+    vllm_logging_config_path = f"{Path(__file__).parent}/vllm_logging_config.json"
     os.environ["VLLM_LOGGING_CONFIG_PATH"] = vllm_logging_config_path
     print(f"\033[46mVLLM_LOGGING_CONFIG_PATH={vllm_logging_config_path}\033[0m", file=sys.stderr)
 
