@@ -380,5 +380,5 @@ You are encouraged to cite one of the following papers if you use omnes-flores m
 
 ## [Version History](https://github.com/megagonlabs/omnes-flores/releases)
 
-### 0.1.0-alpha
-- 2026-03-09 Release 0.1.0a
+### 0.1.0
+- 2026-03-09 Release 0.1.0

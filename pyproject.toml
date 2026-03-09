@@ -2,7 +2,8 @@
 name = "omnes-flores"
 authors = [{name = "Megagon Labs, Tokyo.", email = "ginza@megagon.ai"}]
 description = "omnes-flores: A Unified NLP Framework for LLMs"
-dynamic = ["version"]
+version = "0.1.0"
+# dynamic = ["version"]
 license = "Apache-2.0"
 license-files = ["LICENSE"]
 readme = { file = "README.md", content-type = "text/markdown" }
@@ -41,8 +42,12 @@ Repository = "https://github.com/megagonlabs/omnes-flores"
 omnes-flores = "omnes_flores.cli:main"
 
 [build-system]
-requires = ["setuptools >= 77.0.3"]
+requires = ["setuptools >= 77.0.3", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 package-dir = {"omnes_flores" = "omnes_flores"}
+include-package-data = true
+
+[tool.setuptools.package-data]
+mypkg = ["*.json"]
