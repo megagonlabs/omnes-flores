@@ -54,7 +54,7 @@ Next, generate your access token in huggingface account settings page:
 - Open [`Access Tokens`](https://huggingface.co/settings/tokens) page and then push `+ Create new token` button.
 - In the `User permissions (your-account-name)` section of `Create new Access Token` page:
   - Select `Fine-grained` in `Token type` field (default).
-  - Fill `read-gated-repos` in the `read-gated-repos` field.
+  - Fill `read-gated-repos` in the `Token name` field.
   - Check the following items in `Repositories` section.
     - `Read access to contents of all repos under your personal namespace`
     - `View access requests for all gated repos under your personal namespace`
