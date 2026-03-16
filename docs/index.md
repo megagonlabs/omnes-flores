@@ -336,7 +336,7 @@ Figure 3: An example of `dependency parsing` prompt instance.
 
 [![omnes-flores-40-lang-41-treebank-v0-eval.png](./images/omnes-flores-40-lang-41-treebank-v0-eval.png)](./images/omnes-flores-40-lang-41-treebank-v0-eval.png)
 
-Figure 4: Accuracy of the proposed method and UDPipe2 on 41 treebanks (average of 4 trials ± sample standard deviation). Yellow highlights indicate relatively small training data or relatively low accuracy. Green highlights indicate relatively large sample standard deviation.
+Table 1: Accuracy of the proposed method and UDPipe2 on 41 treebanks (average of 4 trials ± sample standard deviation). Yellow highlights indicate relatively small training data or relatively low accuracy. Green highlights indicate relatively large sample standard deviation.
 
 Read the [NLP2026 paper (多言語統語解析処理のためのMulti-task LoRA SFT方式の評価)](https://github.com/megagonlabs/omnes-flores/raw/main/docs/images/NLP2026_TS2-16_paper.pdf) and its [poster material](https://github.com/megagonlabs/omnes-flores/raw/main/docs/images/NLP2026_TS2-16_poster.pdf) (written in Japanese) for details.
 
