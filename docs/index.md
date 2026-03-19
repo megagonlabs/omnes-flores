@@ -349,30 +349,18 @@ This work was conducted as part of a collaborative research project between Recr
 You are encouraged to cite one of the following papers if you use omnes-flores models:
 
 ```bibtex
-@inproceedings{matsuda-etal-2025-step,
-    title = "Step-by-step Instructions and a Simple Tabular Output Format Improve the Dependency Parsing Accuracy of {LLM}s",
-    author = "Matsuda, Hiroshi  and
-      Ma, Chunpeng  and
-      Asahara, Masayuki",
-    editor = "Sagae, Kenji  and
-      Oepen, Stephan",
+@inproceedings{matsuda-2025-iwpt,
+    title = "Step-by-step Instructions and a Simple Tabular Output Format Improve the Dependency
+      Parsing Accuracy of {LLM}s",
+    author = "Matsuda, Hiroshi  and  Ma, Chunpeng  and  Asahara, Masayuki",
     booktitle = "Proceedings of the 18th International Conference on Parsing Technologies (IWPT, SyntaxFest 2025)",
-    month = aug,
-    year = "2025",
-    address = "Ljubljana, Slovenia",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2025.iwpt-1.2/",
-    pages = "11--19",
-    ISBN = "979-8-89176-294-7",
-    abstract = "Recent advances in large language models (LLMs) have enabled impressive performance in various tasks. However, standard prompting often struggles to produce structurally valid and accurate outputs, especially in dependency parsing. We propose a novel step-by-step instruction strategy, where universal part-of-speech tagging precedes the prediction of syntactic heads and dependency labels, and a simplified CoNLL-U like output format, our method achieves state-of-the-art accuracy on Universal Dependencies datasets across 17 languages without hallucination or contamination. We further show that multilingual fine-tuning simultaneously improves cross-language generalization performance. Our results highlight the effectiveness of explicit reasoning steps in LLM-based parsing and offer a scalable, format-consistent alternative to bracket-based approaches."
+    url = "https://aclanthology.org/2025.iwpt-1.2/"
 }
 
-@misc{matsuda2025stepbystepinstructionssimpletabular,
-      title={Step-by-step Instructions and a Simple Tabular Output Format Improve the Dependency Parsing Accuracy of LLMs}, 
+@misc{matsuda-2025-arxiv,
+      title={Step-by-step Instructions and a Simple Tabular Output Format Improve the Dependency
+        Parsing Accuracy of LLMs}, 
       author={Hiroshi Matsuda and Chunpeng Ma and Masayuki Asahara},
-      year={2025},
-      eprint={2506.09983},
-      archivePrefix={arXiv},
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2506.09983}, 
 }
