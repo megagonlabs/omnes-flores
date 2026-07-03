@@ -72,7 +72,7 @@ def parse_fields(format_config, field_configs, lines):
         for field_config in field_configs:
             try:
                 if field_config.get("auto_correct") == "begin_from_1":
-                    v = len(records)
+                    v = len(records) + 1
                 else:
                     v = r[field_config["index"]]
                 if field_config.get("type") == "int":
