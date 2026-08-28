@@ -368,5 +368,10 @@ You are encouraged to cite one of the following papers if you use omnes-flores m
 
 ## [Version History](https://github.com/megagonlabs/omnes-flores/releases)
 
+### 0.1.1
+- 2026-08-26 Release 0.1.1
+  - bug fix
+    - #1 Fix token index misalignment in dependency parsing
+
 ### 0.1.0
 - 2026-03-09 Release 0.1.0
