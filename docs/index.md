@@ -9,9 +9,11 @@ A Unified NLP Framework for LLMs.
 
 [![Downloads](https://pepy.tech/badge/omnes-flores/week)](https://pepy.tech/project/omnes-flores)
 
+Please also reference our repository [megagonlabs/omnes-floes](https://github.com/megagonlabs/omnes-flores) for details of implementation.
+
 ## Terms of Use
 
-The `omnes-flores` Python module is published under [Apache License Version 2.0](./LICENSE) and the dedicated models for `omnes-flores` are distributed under the license inherited from the Universal Dependencies treebanks used for training.
+The `omnes-flores` Python module is published under [Apache License Version 2.0](https://github.com/megagonlabs/omnes-flores/blob/main/LICENSE) and the dedicated models for `omnes-flores` are distributed under the license inherited from the Universal Dependencies treebanks used for training.
 
 To use the base model [`google/gemma-2-9b`](https://huggingface.co/google/gemma-2-9b), you must agree to the terms of use in your HuggingFace account.
 
